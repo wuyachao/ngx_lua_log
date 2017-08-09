@@ -7,6 +7,7 @@ ngx_lua_log - 用于将通过Nginx请求的method,headers,body等以json的形�
 
 * 需要openresty，或者Nginx安装ngx_lua模块。[openresty-更好的Nginx](https://github.com/openresty)
 * 如果保存到kafka，则需要安装[lua_resty_kafka](https://github.com/doujiang24/lua-resty-kafka)
+* 因为Nginx使用自带的resolver，如果域名不能解析或者自定义的域名可以使用[dnsmasq](http://www.cnblogs.com/mentalidade/p/6934162.html)
 
 ## example
 
@@ -17,7 +18,7 @@ ngx_lua_log - 用于将通过Nginx请求的method,headers,body等以json的形�
 > 仅仅为了举例，为了直观方便调试，将这些放到url参数中。将这些以配置的方式放到config.lua文件中更好。
 
 | Name               | Description                                            |
-| ------------------:| -------------------------------------------------------|
+| ------------------| -------------------------------------------------------|
 | `log_type`          | 日志类型：file:以文件形式保存 kafka: 保存到kafka           |
 | `log_body`         | 是否记录请求和接口返回的body体                       |
 | `path`             | 日志文件保存的路径文件，该目录和文件需要Nginx读写的权限      |
