@@ -10,7 +10,7 @@ ngx_lua_log - 用于将通过Nginx请求的method,headers,body等以json的形�
 
 ## example
 
-请求`http://localhost:9999/ttt/aaa/bbb?log_type=file&log_body=true&path=/tmp/test.log`
+请求`http://wyc.com:9999/ttt/aaa/bbb?log_type=file&log_body=true&path=/tmp/test.log`
 
 ###请求参数
 
@@ -26,7 +26,7 @@ ngx_lua_log - 用于将通过Nginx请求的method,headers,body等以json的形�
 
 ```
 {
-    "time": 1502270246,
+    "time": 1502274241,
     "uri": "/test/aaa/bbb",
     "request_uri": "/test/aaa/bbb?log_type=file&log_body=true&path=/tmp/test.log"
 }
@@ -40,28 +40,28 @@ ngx_lua_log - 用于将通过Nginx请求的method,headers,body等以json的形�
     "request": {
         "method": "GET",
         "uri": "/ttt/aaa/bbb?log_type=file&log_body=true&path=/tmp/test.log",
-        "size": "485",
-        "request_uri": "http://localhost:9999/ttt/aaa/bbb?log_type=file&log_body=true&path=/tmp/test.log",
+        "size": "477",
+        "request_uri": "http://wyc.com:9999/ttt/aaa/bbb?log_type=file&log_body=true&path=/tmp/test.log",
         "querystring": {
             "path": "/tmp/test.log",
             "log_type": "file",
             "log_body": "true"
         },
         "headers": {
-            "host": "localhost:9999",
+            "host": "wyc.com:9999",
             "accept-language": "zh-CN,zh;q=0.8,en;q=0.6",
-            "accept-encoding": "gzip, deflate, br",
+            "cookie": "V2EX_LANG=zhcn",
             "connection": "keep-alive",
             "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36",
+            "accept-encoding": "gzip, deflate",
             "upgrade-insecure-requests": "1",
-            "cache-control": "max-age=0"
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36"
         }
     },
-    "started_at": 1502270246839,
+    "started_at": 1502274241665,
     "response": {
         "status": 200,
-        "body": "{\"time\":1502270246,\"uri\":\"\\/test\\/aaa\\/bbb\",\"request_uri\":\"\\/test\\/aaa\\/bbb?log_type=file&log_body=true&path=\\/tmp\\/test.log\"}\n",
+        "body": "{\"time\":1502274241,\"uri\":\"\\/test\\/aaa\\/bbb\",\"request_uri\":\"\\/test\\/aaa\\/bbb?log_type=file&log_body=true&path=\\/tmp\\/test.log\"}\n",
         "size": "282",
         "headers": {
             "content-length": "127",
