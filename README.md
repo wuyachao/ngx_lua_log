@@ -12,7 +12,7 @@ ngx_lua_log - 用于将通过Nginx请求的method,headers,body等以json的形�
 
 请求`http://wyc.com:9999/ttt/aaa/bbb?log_type=file&log_body=true&path=/tmp/test.log`
 
-###请求参数
+### 请求参数
 
 > 仅仅为了举例，为了直观方便调试，将这些放到url参数中。将这些以配置的方式放到config.lua文件中更好。
 
@@ -22,7 +22,7 @@ ngx_lua_log - 用于将通过Nginx请求的method,headers,body等以json的形�
 | `log_body`         | 是否记录请求和接口返回的body体                       |
 | `path`             | 日志文件保存的路径文件，该目录和文件需要Nginx读写的权限      |
 
-返回：
+### 返回：
 
 ```
 {
